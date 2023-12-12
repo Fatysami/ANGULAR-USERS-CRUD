@@ -1,0 +1,8 @@
+{
+    "HOME": "Accueil",
+    "USER_MANAGEMENT": "Gestion des Utilisateurs",
+    "WELCOME_MESSAGE": "Bienvenue dans notre Application Angular !",
+    "DELETE_USER": "Supprimer l'Utilisateur",
+    "USER_LIST": "Liste des Utilisateurs",
+    "CHANGE_LANGUAGE": "Changer la Langue"
+  }
