@@ -1,8 +1,13 @@
-<ul class="nav nav-tabs">
-    <li class="nav-item">
-      <a class="nav-link" [routerLink]="['/home']">{{ 'HOME' | translate }}</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" [routerLink]="['/user-management']">{{ 'USER_MANAGEMENT' | translate }}</a>
-    </li>
-  </ul>
+<div class="d-flex">
+  <div class="flex-column bg-dark" id="sidebar">
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <a class="nav-link text-light" [routerLink]="['/home']">{{ 'HOME' | translate }}</a>
+      </li>
+      <li>
+        <a class="nav-link text-light" [routerLink]="['/user-management']">{{ 'USER_MANAGEMENT' | translate }}</a>
+      </li>
+    </ul>
+  </div>
+</div>
+

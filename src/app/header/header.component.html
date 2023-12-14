@@ -1,10 +1,23 @@
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
     <a class="navbar-brand" href="#">Formation Angular CRUD</a>
-    <ng-select [items]="languages"
-               bindLabel="label"
-               bindValue="code"
-               [(ngModel)]="selectedLanguage"
-               (change)="changeLanguage()">
-    </ng-select>
-  </nav>
-  
+    <div class="collapse navbar-collapse" id="navbarLanguageSelect">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <ng-select class="custom-select" [items]="languages"
+                     bindLabel="label"
+                     bindValue="code"
+                     [(ngModel)]="selectedLanguage"
+                     (change)="changeLanguage()">
+            <ng-template ng-label-tmp let-item="item">
+              <img [src]="item.flag" class="flag-icon"/> <!-- Icon only for the selected item -->
+            </ng-template>
+            <ng-template ng-option-tmp let-item="item">
+              <img [src]="item.flag" class="flag-icon"/> {{ item.label }} <!-- Icon and text for options -->
+            </ng-template>
+          </ng-select>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

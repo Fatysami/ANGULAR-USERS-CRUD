@@ -4,13 +4,14 @@ import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  //styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
   languages = [
-    { label: 'English', code: 'en' },
-    { label: 'Français', code: 'fr' }
+    { label: 'EN', code: 'en', flag: 'assets/images/flag_en.png' },
+    { label: 'FR', code: 'fr', flag: 'assets/images/flag_fr.png' }
   ];
+
   selectedLanguage = 'en';
 
   constructor(private translate: TranslateService) {

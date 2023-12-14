@@ -4,5 +4,13 @@
     "WELCOME_MESSAGE": "Welcome to our Angular Application!",
     "DELETE_USER": "Delete User",
     "USER_LIST": "User List",
-    "CHANGE_LANGUAGE": "Change Language"
+    "CHANGE_LANGUAGE": "Change Language",
+
+    "ID": "ID",
+    "AVATAR": "Avatar",
+    "FIRST_NAME": "First Name",
+    "LAST_NAME": "Last Name",
+    "EMAIL": "Email",
+    "ACTIONS": "Actions"
+
   }

@@ -1,37 +1,15 @@
+
 .navbar {
-    background-color: #007bff; /* Couleur de fond bleue pour la barre de navigation */
-    padding: 0.5rem 1rem; /* Espacement interne pour la barre de navigation */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre subtile pour la barre de navigation */
 }
 
-.navbar-brand {
-    color: #fff; /* Texte blanc pour le titre */
-    font-weight: bold; /* Rendre le titre en gras */
-    font-size: 1.5rem; /* Taille du texte pour le titre */
+.custom-select .ng-select-container {
+  background-color: transparent; /* Enlever le fond pour le sélecteur de langue */
+  border: none; /* Enlever la bordure pour le sélecteur de langue */
 }
 
-.ng-select {
-    display: block;
-    width: 200px; /* Largeur fixe pour la Select Box */
-    margin-left: auto; /* Aligner la Select Box à droite */
-    color: #495057; /* Couleur de texte pour les options */
-}
-
-.ng-select .ng-select-container {
-    min-height: calc(1.5em + 0.75rem + 2px); /* Hauteur minimale pour la Select Box */
-    border: 1px solid #ced4da; /* Bordure pour la Select Box */
-    border-radius: 0.25rem; /* Bordures arrondies pour la Select Box */
-}
-
-.ng-select .ng-arrow-wrapper .ng-arrow {
-    border-color: #fff transparent transparent; /* Flèche blanche pour la Select Box */
-}
-
-/* Couleur de fond pour l'option survolée */
-.ng-select .ng-option.marked {
-    background-color: #f8f9fa;
-}
-
-/* Couleur de fond pour l'option sélectionnée */
-.ng-select .ng-option.selected {
-    background-color: #e9ecef;
+.flag-icon {
+  width: 20px;
+  height: auto;
+  margin-right: 8px;
 }

@@ -17,6 +17,6 @@ export class UserService {
     params = params.append('page', page.toString());
     params = params.append('per_page', perPage.toString());
 
-     return this.http.get(`${this.apiUrl}/users`, { params });
+     return this.http.get(`${this.apiUrl}`, { params });
   }
 }

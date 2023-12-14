@@ -1,0 +1,37 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style pour le header */
+app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030; /* Assurez-vous que le z-index est assez élevé pour être au-dessus des autres éléments */
+  background-color: #007bff; /* Ou la couleur que vous souhaitez pour le header */
+  /* Hauteur du header si elle n'est pas définie dans le composant lui-même */
+  height: 60px;
+}
+
+/* Style pour le menu */
+app-menu {
+  position: fixed;
+  top: 60px; /* Définissez ceci pour correspondre à la hauteur de votre app-header */
+  bottom: 0;
+  left: 0;
+  width: 250px; /* Largeur du menu */
+  z-index: 1020; /* Z-index sous le header mais au-dessus du contenu de la page */
+  background-color: #343a40; /* Couleur de fond du menu */
+  overflow-y: auto; /* Permettre le défilement si le contenu est long */
+}
+
+/* Style pour le contenu principal */
+.content {
+  margin-top: 60px; /* Assurez-vous que cela corresponde à la hauteur de votre app-header */
+  margin-left: 250px; /* Assurez-vous que cela corresponde à la largeur de votre app-menu */
+  padding: 1rem;
+}

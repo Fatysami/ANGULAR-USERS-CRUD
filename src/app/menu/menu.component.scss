@@ -1,0 +1,9 @@
+/* Assurez-vous que le menu est fixe et ne chevauche pas le contenu */
+#sidebar {
+    position: fixed;
+    left: 0;
+    width: 250px; /* ou la largeur de votre menu */
+    height: 100%;
+    background-color: #343a40;
+  }
+  

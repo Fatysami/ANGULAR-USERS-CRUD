@@ -4,5 +4,12 @@
     "WELCOME_MESSAGE": "Bienvenue dans notre Application Angular !",
     "DELETE_USER": "Supprimer l'Utilisateur",
     "USER_LIST": "Liste des Utilisateurs",
-    "CHANGE_LANGUAGE": "Changer la Langue"
+    "CHANGE_LANGUAGE": "Changer la Langue",
+
+    "ID": "ID",
+    "AVATAR": "Avatar",
+    "FIRST_NAME": "Prénom",
+    "LAST_NAME": "Nom",
+    "EMAIL": "E-mail",
+    "ACTIONS": "Actions"
   }
