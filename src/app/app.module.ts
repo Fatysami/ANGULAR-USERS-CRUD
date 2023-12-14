@@ -3,6 +3,7 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { NgbPaginationModule, NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
 
 // Importation de Bootstrap et des modules supplémentaires
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -36,6 +37,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     NgbModule, // Module Bootstrap
     NgSelectModule, // Module NgSelect
     HttpClientModule,
+    NgbTypeaheadModule,
+    NgbPaginationModule,
     FormsModule, // FormsModule déplacé ici
     TranslateModule.forRoot({ // Module de traduction
       loader: {

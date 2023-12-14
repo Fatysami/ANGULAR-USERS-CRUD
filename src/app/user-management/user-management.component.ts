@@ -8,6 +8,7 @@ import { UserService } from '../services/user.service';
   styleUrl: './user-management.component.scss'
 })
 export class UserManagementComponent implements OnInit  {
+  totalUsers: number = 0;
   totalPages: number | undefined;
   perPage: number = 6; // Nombre d'utilisateurs par page
   currentPage = 1;
@@ -23,7 +24,8 @@ export class UserManagementComponent implements OnInit  {
     this.userService.getUsers(page, this.perPage).subscribe(
       response => {
         this.users = response.data;
-        this.totalPages = response.total_pages; // Vous pouvez utiliser cette valeur pour la pagination
+        this.totalPages = response.total_pages; 
+        this.totalUsers = response.total;
       },
       error => {
         console.error(error);
@@ -38,10 +40,10 @@ export class UserManagementComponent implements OnInit  {
   }
 
   updateUser(user: any) {
-    // Logique pour la mise à jour de l'utilisateur
+    // TODO: Logique pour la mise à jour de l'utilisateur
   }
 
   deleteUser(userId: number) {
-    // Logique pour la suppression de l'utilisateur
+    // TODO: Logique pour la suppression de l'utilisateur
   }
 }
