@@ -1,27 +1,43 @@
-# MyAngularCRUD
+# Application Angular CRUD
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
+## Description
+Cette application est une application Angular à page unique qui offre des opérations de création, lecture, mise à jour et suppression (CRUD) sur les données utilisateurs. Elle utilise une fausse API pour la gestion des données utilisateurs.
 
-## Development server
+## Fonctionnalités
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Gestion des utilisateurs** : Liste, crée, met à jour et supprime des utilisateurs.
+- **Pagination** : Navigation entre différentes pages de données utilisateur.
+- **Sélection de langue** : Change la langue de l'application dynamiquement avec un menu déroulant.
+- **Style** : Utilise Bootstrap pour le design réactif et FontAwesome pour les icônes.
+- **Observables** : Gère les flux de données asynchrones en utilisant les observables RxJS.
 
-## Code scaffolding
+## Comment exécuter
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Cloner le dépôt.
+2. Exécuter `npm install` pour installer les dépendances.
+3. Utiliser `ng serve` pour démarrer le serveur de développement.
 
-## Build
+## Composants
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- `HeaderComponent` : Affiche la barre de navigation supérieure et le sélecteur de langue.
+- `MenuComponent` : Contient les liens de navigation pour l'application.
+- `UserListComponent` : Affiche un tableau des utilisateurs avec des actions pour éditer ou supprimer.
+- `UserFormComponent` : Formulaire pour créer ou mettre à jour des données utilisateur.
 
-## Running unit tests
+## Services
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- `UserService` : Gère les requêtes HTTP pour récupérer et gérer les données utilisateur.
 
-## Running end-to-end tests
+## Localisation
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- `@ngx-translate/core` : Support de l'internationalisation pour plusieurs langues.
 
-## Further help
+## Dépendances
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Angular
+- Bootstrap
+- FontAwesome
+- RxJS
+- @ngx-translate/core
+
+Pour plus d'informations détaillées, veuillez vous référer aux fichiers de composants et de services individuels au sein du projet.

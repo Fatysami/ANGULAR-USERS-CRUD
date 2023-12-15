@@ -2,6 +2,7 @@ import { Component,OnInit  } from '@angular/core';
 import { UserService } from '../services/user.service';
 
 
+
 @Component({
   selector: 'app-user-management',
   templateUrl: './user-management.component.html',
@@ -39,11 +40,26 @@ export class UserManagementComponent implements OnInit  {
     this.loadUsers(page);
   }
 
+  addUser() {
+    // TODO: Logique pour ajouter un utilisateur
+  }
   updateUser(user: any) {
     // TODO: Logique pour la mise à jour de l'utilisateur
   }
 
   deleteUser(userId: number) {
-    // TODO: Logique pour la suppression de l'utilisateur
+    const confirmed = window.confirm('Are you sure you want to delete this user?');
+    
+    if (confirmed) {
+      this.userService.deleteUser(userId).subscribe(
+        () => {
+          console.log('User deleted successfully');
+          this.loadUsers(this.currentPage);
+        },
+        (error: Error) => { 
+          console.error('There was an error deleting the user', error.message);
+        }
+      );
+    }
   }
 }

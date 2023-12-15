@@ -1,23 +1,18 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Formation Angular CRUD</a>
-    <div class="collapse navbar-collapse" id="navbarLanguageSelect">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <ng-select class="custom-select" [items]="languages"
-                     bindLabel="label"
-                     bindValue="code"
-                     [(ngModel)]="selectedLanguage"
-                     (change)="changeLanguage()">
-            <ng-template ng-label-tmp let-item="item">
-              <img [src]="item.flag" class="flag-icon"/> <!-- Icon only for the selected item -->
-            </ng-template>
-            <ng-template ng-option-tmp let-item="item">
-              <img [src]="item.flag" class="flag-icon"/> {{ item.label }} <!-- Icon and text for options -->
-            </ng-template>
-          </ng-select>
-        </li>
-      </ul>
+    <div ngbDropdown class="d-inline-block dropdown">
+      <button class="btn btn-outline-primary" id="dropdownLang" ngbDropdownToggle>
+        <img [src]="selectedLanguageObject?.flag" class="flag-icon" alt="Current Language">
+        {{ selectedLanguageObject?.label }}
+      </button>
+    
+      <div ngbDropdownMenu aria-labelledby="dropdownLang">
+        <button class="dropdown-item" *ngFor="let lang of languages" (click)="changeLanguage(lang.code)">
+          <img [src]="lang.flag" class="flag-icon" alt="Flag"> {{ lang.label }}
+        </button>
+      </div>
     </div>
+    
   </div>
 </nav>

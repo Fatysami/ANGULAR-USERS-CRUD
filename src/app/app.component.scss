@@ -11,27 +11,25 @@ app-header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1030; /* Assurez-vous que le z-index est assez élevé pour être au-dessus des autres éléments */
-  background-color: #007bff; /* Ou la couleur que vous souhaitez pour le header */
-  /* Hauteur du header si elle n'est pas définie dans le composant lui-même */
+  z-index: 1030; 
+  background-color: #f2f3f5; 
   height: 60px;
 }
 
 /* Style pour le menu */
 app-menu {
   position: fixed;
-  top: 60px; /* Définissez ceci pour correspondre à la hauteur de votre app-header */
+  top: 60px; 
   bottom: 0;
   left: 0;
-  width: 250px; /* Largeur du menu */
-  z-index: 1020; /* Z-index sous le header mais au-dessus du contenu de la page */
-  background-color: #343a40; /* Couleur de fond du menu */
-  overflow-y: auto; /* Permettre le défilement si le contenu est long */
+  width: 250px; 
+  z-index: 1020; 
+  background-color: #343a40; 
+  overflow-y: auto; 
 }
 
-/* Style pour le contenu principal */
 .content {
-  margin-top: 60px; /* Assurez-vous que cela corresponde à la hauteur de votre app-header */
-  margin-left: 250px; /* Assurez-vous que cela corresponde à la largeur de votre app-menu */
+  margin-top: 56px; 
+  margin-left: 250px; 
   padding: 1rem;
 }

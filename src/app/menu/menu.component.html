@@ -1,13 +1,16 @@
-<div class="d-flex">
-  <div class="flex-column bg-dark" id="sidebar">
-    <ul class="nav nav-pills flex-column mb-auto">
-      <li class="nav-item">
-        <a class="nav-link text-light" [routerLink]="['/home']">{{ 'HOME' | translate }}</a>
-      </li>
-      <li>
-        <a class="nav-link text-light" [routerLink]="['/user-management']">{{ 'USER_MANAGEMENT' | translate }}</a>
-      </li>
-    </ul>
-  </div>
-</div>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+<div class="bg-dark" id="sidebar">
+  <ul class="nav nav-pills flex-column mb-auto">
+    <li class="nav-item">
+      <a class="nav-link text-light" [routerLink]="['/home']">
+        <i class="material-icons">home</i> {{ 'HOME' | translate }}
+      </a>
+    </li>
+    <li>
+      <a class="nav-link text-light" [routerLink]="['/user-management']">
+        <i class="material-icons">people</i> {{ 'USER_MANAGEMENT' | translate }}
+      </a>
+    </li>
+  </ul>
+</div>

@@ -18,6 +18,7 @@ import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
 import { UserManagementComponent } from './user-management/user-management.component';
 
+
 // Factory pour créer un loader de traduction
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -26,10 +27,10 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent, // HeaderComponent déclaré ici
-    MenuComponent, // MenuComponent déclaré ici
-    HomeComponent, // HomeComponent déclaré ici
-    UserManagementComponent // UserManagementComponent déclaré ici
+    HeaderComponent, 
+    MenuComponent, 
+    HomeComponent, 
+    UserManagementComponent 
   ],
   imports: [
     BrowserModule,
@@ -39,7 +40,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     HttpClientModule,
     NgbTypeaheadModule,
     NgbPaginationModule,
-    FormsModule, // FormsModule déplacé ici
+    FormsModule, 
     TranslateModule.forRoot({ // Module de traduction
       loader: {
         provide: TranslateLoader,

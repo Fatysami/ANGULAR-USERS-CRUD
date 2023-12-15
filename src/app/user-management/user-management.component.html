@@ -1,48 +1,61 @@
-<table  class="table table-striped">
-  <thead>
-    <tr>
-      <th>{{ 'ID' | translate }}</th>
-      <th>{{ 'AVATAR' | translate }}</th>
-      <th>{{ 'FIRST_NAME' | translate }}</th>
-      <th>{{ 'LAST_NAME' | translate }}</th>
-      <th>{{ 'EMAIL' | translate }}</th>
-      <th>{{ 'ACTIONS' | translate }}</th>
-    </tr>
-  </thead>
-    <tbody>
-      <tr *ngFor="let user of users">
-        <td>{{ user.id }}</td>
-        <td><img class="rounded-circle" [src]="user.avatar" alt="User avatar" width="50"></td>
-        <td>{{ user.first_name }}</td>
-        <td>{{ user.last_name }}</td>
-        <td>{{ user.email }}</td>
-        <td class="overflow-hidden">
-          <div ngbDropdown container="body">
-            <button type="button" class="btn btn-outline-primary btn-sm" ngbDropdownToggle>Actions</button>
-            <div ngbDropdownMenu>
-              <button ngbDropdownItem (click)="updateUser(user)">Edit</button>
-              <div class="dropdown-divider"></div>
-              <button ngbDropdownItem (click)="deleteUser(user.id)">Delete</button>
-            </div>
-          </div>
-
-        </td>
+<div class="table-responsive">
+  <div class="mb-2 d-flex justify-content-between align-items-center">
+    <h2>{{ 'TABLE_TITLE' | translate }}</h2>
+    <button type="button" class="btn btn-success" (click)="addUser()">
+      {{ 'ADD' | translate }}
+    </button>
+  </div>
+  <table  class="table table-striped">
+    <thead>
+      <tr>
+        <th>{{ 'ID' | translate }}</th>
+        <th>{{ 'AVATAR' | translate }}</th>
+        <th>{{ 'FIRST_NAME' | translate }}</th>
+        <th>{{ 'LAST_NAME' | translate }}</th>
+        <th>{{ 'EMAIL' | translate }}</th>
+        <th>{{ 'ACTIONS' | translate }}</th>
       </tr>
-      <div class="d-flex justify-content-between p-2">
-        <ngb-pagination
-          [collectionSize]="totalUsers"
-          [(page)]="currentPage"
-          [pageSize]="perPage"
-          (pageChange)="loadUsers($event)"
-        >
-        </ngb-pagination>
-      
-        <select class="form-select" [(ngModel)]="perPage" (ngModelChange)="loadUsers(currentPage)">
-          <option [ngValue]="2">2 items per page</option>
-          <option [ngValue]="4">4 items per page</option>
-          <option [ngValue]="6">6 items per page</option>
-        </select>
-      </div>
-      
-    </tbody>
-  </table>
+    </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.id }}</td>
+          <td><img class="rounded-circle" [src]="user.avatar" alt="User avatar" width="50"></td>
+          <td>{{ user.first_name }}</td>
+          <td>{{ user.last_name }}</td>
+          <td>{{ user.email }}</td>
+          <td class="overflow-hidden">
+            <div ngbDropdown container="body">
+              <button type="button" class="btn btn-outline-primary btn-sm" ngbDropdownToggle>Actions</button>
+              <div ngbDropdownMenu>
+                <button ngbDropdownItem (click)="updateUser(user)">
+                  <i class="material-icons">edit</i> {{ 'UPDATE' | translate }}
+                </button>
+                <div class="dropdown-divider"></div>
+                <button ngbDropdownItem (click)="deleteUser(user.id)">
+                  <i class="material-icons">delete</i> {{ 'DELETE' | translate }}
+                </button>
+              </div>
+            </div>
+  
+          </td>
+        </tr>
+        <div class="d-flex justify-content-between p-2">
+          <ngb-pagination
+            [collectionSize]="totalUsers"
+            [(page)]="currentPage"
+            [pageSize]="perPage"
+            (pageChange)="loadUsers($event)"
+          >
+          </ngb-pagination>
+        
+          <select class="form-select" [(ngModel)]="perPage" (ngModelChange)="loadUsers(currentPage)">
+            <option [ngValue]="2">2 {{ 'PAGE_NUMBER' | translate }}</option>
+            <option [ngValue]="4">4 {{ 'PAGE_NUMBER' | translate }}</option>
+            <option [ngValue]="6">6 {{ 'PAGE_NUMBER' | translate }}</option>
+          </select>
+        </div>
+        
+      </tbody>
+    </table>
+
+</div>

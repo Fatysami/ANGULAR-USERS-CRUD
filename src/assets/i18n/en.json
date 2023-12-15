@@ -2,15 +2,26 @@
     "HOME": "Home",
     "USER_MANAGEMENT": "User Management",
     "WELCOME_MESSAGE": "Welcome to our Angular Application!",
+    "FOOTER_MESSAGE":"Made by Fatima Ezzahraa Sami with ",
     "DELETE_USER": "Delete User",
     "USER_LIST": "User List",
     "CHANGE_LANGUAGE": "Change Language",
-
+     
+    "TABLE_TITLE":"User Management",
     "ID": "ID",
     "AVATAR": "Avatar",
     "FIRST_NAME": "First Name",
     "LAST_NAME": "Last Name",
     "EMAIL": "Email",
-    "ACTIONS": "Actions"
+    "ACTIONS": "Actions",
+    "PAGE_NUMBER":"Items per page",
+    "UPDATE":"Update",
+    "DELETE":"Delete",
+    "ADD":"Add user",
 
+    "CONFIRME_MESSAGE1": "Are you sure you want to delete this user?",
+    "CONFIRME_MESSAGE2": "User deleted successfully",
+
+    "ERROR_1":"There was an error deleting the user"
+    
   }

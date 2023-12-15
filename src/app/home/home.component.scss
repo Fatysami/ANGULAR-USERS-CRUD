@@ -1,6 +1,18 @@
 .welcome-message {
-    padding: 2rem;
-    text-align: center;
-    font-size: 1.5rem; /* Taille de la police pour le message de bienvenue */
-  }
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+}
   
+  .text-love {
+    color: red; 
+  }

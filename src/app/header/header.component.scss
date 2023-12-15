@@ -1,15 +1,8 @@
-
-.navbar {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre subtile pour la barre de navigation */
-}
-
-.custom-select .ng-select-container {
-  background-color: transparent; /* Enlever le fond pour le sélecteur de langue */
-  border: none; /* Enlever la bordure pour le sélecteur de langue */
-}
-
 .flag-icon {
-  width: 20px;
+  width: 20px; 
   height: auto;
-  margin-right: 8px;
+  margin-right: 5px;
+}
+.navbar {
+  z-index: 1040; 
 }

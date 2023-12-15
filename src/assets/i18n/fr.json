@@ -2,14 +2,25 @@
     "HOME": "Accueil",
     "USER_MANAGEMENT": "Gestion des Utilisateurs",
     "WELCOME_MESSAGE": "Bienvenue dans notre Application Angular !",
+    "FOOTER_MESSAGE":"Réalisé par Fatima Ezzahraa Sami avec ",
     "DELETE_USER": "Supprimer l'Utilisateur",
     "USER_LIST": "Liste des Utilisateurs",
     "CHANGE_LANGUAGE": "Changer la Langue",
-
+    
+    "TABLE_TITLE":"Gestion des Utilisateurs",
     "ID": "ID",
     "AVATAR": "Avatar",
     "FIRST_NAME": "Prénom",
     "LAST_NAME": "Nom",
     "EMAIL": "E-mail",
-    "ACTIONS": "Actions"
+    "ACTIONS": "Actions",
+    "PAGE_NUMBER":"Éléments par page",
+    "UPDATE":"modifier",
+    "DELETE":"Supprimer",
+    "ADD":"Ajouter utilisateur",
+
+    "CONFIRME_MESSAGE1": "Êtes-vous sûr de vouloir supprimer cet utilisateur ?",
+    "CONFIRME_MESSAGE2": "Utilisateur supprimé avec succès",
+
+    "ERROR_1":"Une erreur s'est produite lors de la suppression de l'utilisateur"
   }
